@@ -1,0 +1,474 @@
+
+
+
+\documentclass[a4paper,12pt,openany]{report} %Start with basic pages
+%\usepackage{ragged2e}
+%\raggedright
+\usepackage{titlesec} %Formatting Chapter Headings
+\titleformat{\chapter}[display]{\normalfont\centering}{\chaptertitlename }{20pt}{\tiny}
+
+
+\usepackage{setspace} %Helps determine line spacing
+\usepackage{textcase} %Force uppercase or lowercase
+\usepackage{tocloft}  %Table of contents list of tables list of figures etc.
+%\setlength{\cftbeforechapskip}{5in}
+
+%\usepackage{tocvsec2}
+\usepackage{datatool} %Read data from CSVs.
+\usepackage[nonumberlist,xindy,toc]{glossaries} %Glossaries
+\renewcommand*{\glsclearpage}{\clearpage}
+\usepackage[utf8]{inputenc} %Uses right lettering inputs. Maybe obselete?
+\usepackage{graphicx} %Used for figures
+\usepackage{xcolor}           %% For colors used in code listings.
+\usepackage{listings}         %% Code listings
+%\usepackage[T1]{fontenc} %Determines font
+\usepackage{lmodern} %Loads some fonts
+\usepackage{booktabs} %Gives structure for tables
+\usepackage{array} %Extra table stuff
+\usepackage[labelfont=bf,textfont=md]{caption} %Figure Captions
+\usepackage{multirow} %Tables with multiple rows
+\usepackage{amsmath} %Latex math
+\usepackage[backend=biber, style=ieee, citestyle=numeric-comp, doi=false, isbn=false, url=false]{biblatex} %Bibliography
+\usepackage[margin=1in]{geometry} %Page Margins
+\usepackage{times} %Forces times font
+\usepackage{notoccite} % Stops the counting of references in the table of contents
+\usepackage[titletoc]{appendix} %Puts appendix titles in the table of contents
+\usepackage{siunitx} %SI unit package
+\usepackage{gensymb} % Defines generic symbols \celsius and stuff
+\usepackage{enumitem} %Lets you itemize stuff in bullet points or number points
+\usepackage[hidelinks]{hyperref} %Follows the text that you are referencing
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage[document]{ragged2e}
+\setlength\RaggedRightParindent{\parindent}
+\RaggedRight
+\usepackage{etoolbox}
+%\usepackage{lipsum}% just to generate text for the example
+
+\patchcmd{\thebibliography}{\chapter}{\chapter}{}{}
+
+
+
+\hyphenpenalty=1000
+
+%\renewcommand{\insertchapterspace}{}
+%
+%  usepackage{cite} DOES NOT WORK!
+\addbibresource{bib.bib} % add a bib-reference file
+\graphicspath{ {images/} }
+
+\makeglossaries
+\input{inc/glossary}
+\glsaddall
+
+
+%\renewcommand{\section}
+%{
+%	\@startsection{section}{1}{0mm}{4ex}{2ex}{\normalsize\bfseries}
+%}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+\title{Code Listing}
+
+
+
+
+\doublespacing
+
+\setlength{\cftsecindent}{0pt}% Remove indent for \section
+\setlength{\cftsubsecindent}{0pt}% Remove indent for \subsection
+
+\renewcommand\cftchapfont{\mdseries}
+\renewcommand\cftchappagefont{\mdseries}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+\usepackage{sectsty}
+
+\allsectionsfont{\fontsize{12}{15}\selectfont}
+
+\chapterfont{\fontsize{14}{15}\selectfont}
+
+\subsectionfont{\fontsize{12}{15}\selectfont\normalfont\itshape}
+
+
+% Z represents all three ToC, LoT an LoF respectively
+%% adding 1in vertical space to make total 2 inch space from top for Z
+%\setlength{\cftbeforetoctitleskip}{1in}
+%\setlength{\cftbeforelottitleskip}{1in}
+%\setlength{\cftbeforeloftitleskip}{1in}
+%
+%\setlength{\cftaftertoctitleskip}{0pt}
+%
+%% making titles of Z respectively centered and fontsize is
+%% \Large which can be changed to any value desired
+%\renewcommand{\cfttoctitlefont}{{~}\hfill\Huge}
+%\renewcommand{\cftaftertoctitle}{%
+%	\hfill{~}\\[\baselineskip]{\normalfont Table}\hfill{\normalfont Page}\thispagestyle{empty}}
+%
+%\renewcommand{\cftlottitlefont}{{~}\hfill\Huge}
+%\renewcommand{\cftafterlottitle}{%
+%	\hfill{~}\\[\baselineskip]{\normalfont Table}\hfill{\normalfont Page}\thispagestyle{empty}}
+%
+%\renewcommand{\cftloftitlefont}{{~}\hfill\Huge}
+%\renewcommand{\cftafterloftitle}{%
+%	\hfill{~}\\[\baselineskip]{\normalfont Table}\hfill{\normalfont Page}\thispagestyle{empty}}
+%
+%% reducing dot separation to make it look like a dotted line
+%\renewcommand{\cftdotsep}{1}
+%
+%% increasing width for page number for Z
+%\cftsetpnumwidth{1cm}
+%
+%% increasing right margin which makes width available for titles smaller
+%% hence grater the value smaller the title width
+%\cftsetrmarg{3cm}
+%
+%
+%% these commands sets leaders for part and chapter which by default
+%% are not shown, to make them disappear again replace dotsep value by
+%% \cftnodot
+%% e.g. \renewcommand{\cftpartdotsep}{\cftnodot}
+%\renewcommand{\cftpartdotsep}{1}
+%\renewcommand{\cftpartleader}{\cftdotfill{\cftpartdotsep}}
+%
+%\renewcommand{\cftchapdotsep}{1}
+%\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+
+\begin{document}
+		\let\ref\autoref %This puts the word "Table" into "Table 1"
+\newgeometry{margin=1in,top=2in}
+	\begin{titlepage}
+		\begin{center}
+		
+			
+			\doublespacing
+			
+			\uppercase{Laser Assisted Cold Spray of Ferritic Alloys: \\
+				Oxide Dispersion Strengthened F\MakeLowercase{e}\textsubscript{91}N\MakeLowercase{i}\textsubscript{8}Z\MakeLowercase{r}\textsubscript{1} \\
+				and AISI 4340 steel}
+			
+			\vspace{\baselineskip}
+			%			\vspace{\baselineskip}
+			
+			by
+			\\
+			\uppercase{Dallin James Barton
+				\\
+				\singlespacing
+				Gregory B. Thompson, Committee Chair \\
+				Luke N. Brewer, Co-Chair \\
+				Steve R. Danieweicz \\
+				Viola L. Acoff \\
+				Manoj K. Mahapatra \\
+				B. Chad Hornbuckle \\
+				Kristopher A. Darling} \\
+			\doublespacing
+			\vspace{\baselineskip}
+			%			\vspace{\baselineskip}
+			\uppercase{a dissertation}\\
+			\vspace{\baselineskip}
+			%			\vspace{\baselineskip}
+			\singlespacing
+			Submitted in partial fulfillment of the requirements\\
+			for the degree of Doctor of Philosophy \\
+			in the Department of Materials Science \\
+			in the Graduate School of\\
+			The University of Alabama\\
+			\doublespacing
+			\vspace{\baselineskip}
+			\vspace{\baselineskip}
+			TUSCALOOSA, ALABAMA\\
+			\vspace{\baselineskip}
+			2020
+			
+			
+		\end{center}
+	\end{titlepage}
+	
+\restoregeometry		
+	\newpage
+	\thispagestyle{empty}
+	%Copyright Page
+	\vspace*{\fill}
+	\begin{center}
+		\singlespacing
+		Copyright Dallin James Barton 2020\\
+		ALL RIGHTS RESERVED
+	\end{center}
+	\pagenumbering{roman}
+	\chapter*{}
+
+	\addcontentsline{toc}{chapter}{ABSTRACT}
+	%Abstract Page
+
+	\begin{center}
+		\vspace{-0.5in}
+		ABSTRACT
+	\end{center}
+		\input{abstract/abstract}
+	\chapter*{}
+	\addcontentsline{toc}{chapter}{DEDICATION}
+		
+	%Dedication
+	\vspace{-0.5in}
+	\begin{center}
+		DEDICATION
+		
+	\end{center}
+	\input{dedication/dedication}
+	
+	
+	\chapter*{}
+	\vspace{-0.5in}
+	\begingroup
+	\let\clearpage\relax
+	\addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS AND SYMBOLS}
+	%List of Abbreviations and symbols
+	\begin{center}
+		LIST OF ABBREVIATIONS AND SYMBOLS 
+	\end{center}
+%		\renewcommand{\glsnamefont}[1]{\normalfont}
+		\vspace{-1in}
+		\renewcommand{\glossaryname}{}
+		\renewcommand*{\glsnamefont}[1]{\textmd{#1}}
+		\glstocfalse
+%		\renewcommand*{\glsclearpage}{}
+		\nopagebreak
+		\printglossaries
+		\glsresetall
+	\endgroup
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+	
+
+	\chapter*{}
+	\addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
+	\vspace{-0.7in}
+	\begin{center}
+		ACKNOWLEDGMENTS
+		
+	\end{center}
+
+	\input{Acknowledgments/Acknowledgments}
+
+
+
+%	\vspace{5in}
+	\begin{center}
+		
+		
+%		\vspace{5.5in}
+%		\newgeometry{top=2in}
+\newpage
+%\newgeometry{top=2in}
+%		CONTENTS
+%\restoregeometry
+
+\singlespacing
+\renewcommand{\contentsname}{CONTENTS}
+\renewcommand{\cfttoctitlefont}{\normalfont} 
+		\normalfont{
+%			\renewcommand*\contentsname{}
+			%	\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+			%	\addtocontents{toc}{\setcounter{tocdepth}{0}}	
+			%	\renewcommand{\@p}{6.75em}
+%			\doublespacing
+%			\begingroup
+%			\let\clearpage\relax
+%			\vspace{-2.5cm} % the removed space. Set as appropriate
+			
+			\tableofcontents
+%			\endgroup
+		}
+%		\restoregeometry
+	\end{center}
+	\chapter*{}
+	\begin{singlespace}
+%		content...
+
+	\addcontentsline{toc}{chapter}{LIST OF TABLES}
+	
+
+	\begin{center}
+		\vspace{-0.5in}
+		LIST OF TABLES
+		\renewcommand{\listtablename}{}
+		\setlength\cftbeforetabskip{20pt}
+		\let\clearpage\relax
+		\vspace{-2.5cm}
+		
+		\listoftables
+	\end{center}
+	\chapter*{}
+	\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+	
+
+	\begin{center}
+		\vspace{-0.5in}
+		LIST OF FIGURES
+		
+		
+		
+		\renewcommand{\listfigurename}{}
+		\setlength\cftbeforefigskip{20pt}
+		\begingroup
+		\let\clearpage\relax
+		\vspace{-2.5cm}
+		
+		\listoffigures
+		\endgroup
+	\end{center}
+	\newpage
+	
+	\end{singlespace}
+	
+	
+	
+
+
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+
+\setcounter{tocdepth}{0}
+\titleformat{\chapter}[display]{\normalfont\centering}{ }{0pt}{\normalfont}
+\titleformat{\section}[display]{\normalfont\centering}{ }{0pt}{\normalfont}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+		
+		\chapter{INTRODUCTION} 
+		\label{chap:Intro}
+		%You must have sections nestled in chapters. Sections without chapters break latex.
+		\input{Intro/Intro}
+
+		\chapter{EXPERIMENTAL PROCEDURE}
+		\label{chap:Methods} 
+		%You must have sections nestled in chapters. Sections without chapters break latex.
+		\input{Methods/Methods}
+
+
+
+
+
+		\begin{refsection}
+			\include{HSR/HSR}
+			\label{chap:HSR}
+			\singlespacing
+			\printbibliography[title = Chapter References\\]
+			\doublespacing
+		\end{refsection}
+	
+		\begin{refsection}
+			\include{ODSLACS/ODSLACS}
+			\label{chap:ODSLACS}
+			\singlespacing
+			\printbibliography[title = Chapter References\\]
+			\doublespacing
+		\end{refsection}
+
+
+		\begin{refsection}
+			\include{Isosurfaces/Isosurfaces}
+			\label{chap:Isosurfaces}
+			\singlespacing
+			\printbibliography[title = Chapter References\\]
+			\doublespacing
+		\end{refsection}
+
+
+		\begin{refsection}
+			\include{RSLACS/RSLACS}
+			\label{chap:RSLACS}
+			\singlespacing
+			\printbibliography[title = Chapter References\\]
+			\doublespacing
+		\end{refsection}
+
+		\begin{refsection}
+			\include{4340/4340}
+			\label{chap:4340}
+			\singlespacing
+			\printbibliography[title = Chapter References\\]
+			\doublespacing
+		\end{refsection}
+
+		\chapter{CONCLUSION}
+			\input{Conclusion/Conclusion}
+			\label{chap:Conclusion}
+
+
+	\addcontentsline{toc}{chapter}{REFERENCES}
+
+		\singlespacing
+   
+		\printbibliography[title = \vspace{0.8in}REFERENCES\\]
+		\doublespacing
+	
+	\appendix	
+		
+		\begin{refsection}
+			\include{appendix/hsrapp}
+			\label{chap:ATOM PROBE MASS-TO-CHARGE RATIO SPECTRUM OF ODS MATERIAL ECAE PROCESSED}
+			\singlespacing
+			\printbibliography[title = \\Appendix A References\\]
+			\doublespacing
+		\end{refsection}
+		
+		\begin{refsection}
+			\include{appendix/isoappparticle}
+%			\singlespacing
+%			\printbibliography[title = Appendix B References]
+%			\doublespacing
+		\end{refsection}
+		
+		\begin{refsection}
+			\include{appendix/isoappextend}
+			\label{EXTENSION OF CLUSTER ANALYSIS TECHNIQUES}
+			\singlespacing
+			\printbibliography[title = \vspace{0.8in}Appendix C References\\]
+			\doublespacing
+		\end{refsection}		
+		
+		\begin{refsection}
+			\include{appendix/isocodeapp}
+			\singlespacing
+			\printbibliography[title = \vspace{0.8in}Appendix D Reference\\]
+			\doublespacing
+		\end{refsection}
+	
+		\begin{refsection}
+			\include{appendix/odstable}
+			\singlespacing
+			\printbibliography[title = \vspace{0.8in}Appendix E Reference\\]
+			\doublespacing
+		\end{refsection}
+		
+
+\end{document}
