@@ -1,0 +1,25 @@
+\chapter{CODE LISTINGS FOR ATOM PROBE RANDOMIZING SIMULATIONS}
+
+\section*{Chemical Randomizing Code}
+
+	The first method is keeping the same positions and randomizing the mass-to-charge positions. The file format is written as .pos converted to .csv files using IVAS. These files have four columns: x position, y position, z position, and mass-to-charge ratio. Changing a file of 75 million ions in this manner took about 30 minutes with a 2.2 GHz processor. This is the code written in Python 3.6 and ran on a UNIX system, MacOS.
+
+
+{\setstretch{1.0}
+\lstinputlisting[language=Python,caption=Chemical Randomizing Code]{Isosurfaces/Code/chemicalrandomizing.py}	
+}
+
+
+\section*{Complete Spatial Randomness Code}
+
+The code for complete spatial randomness is based off of the equation found in \cite{RN1114},
+\begin{equation}
+\label{isoappeq1}
+ P_{K}(r,p)dr = \dfrac{3}{(K-1)!}\left(\dfrac{4\pi}{3}\rho\right)^{K}r^{3K-1}exp\left(-\dfrac{4\pi}{3}\rho r^{3}\right)dr. 
+\end{equation}
+
+Large exponents and factorials require too much computational power. A natural log was applied to the equation eliminating the exponent and allows for Stirling’s approximation to be used.
+
+{\setstretch{1.0}
+	\lstinputlisting[language=Python,caption=Complete Spatial Randomization Code]{Isosurfaces/Code/CSR.py}	
+}
