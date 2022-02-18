@@ -1,0 +1,208 @@
+
+\section*{Motivation}
+	High-strength steels allow for several cutting-edge technological advantages including light-weighting, protective armor, and high temperature nuclear reactor development \cite{RN707}. Steels have been the dominant material for more than a century, and metallurgical advances throughout the past century have created alloys with even higher strengths. The achievement of these higher strengths permits structural designs with either less material, a higher factor of safety, or a compromise of both. Two particular classes of high-strength ferrous alloys include oxide dispersion strengthened (ODS) alloys and American Iron and Steel Institute (AISI) 4340 steel. 
+	
+	In ODS materials, the oxide dispersions come from mechanically alloying nanoscale oxides into the ferritic alloy powders \cite{RN1177}. Other means of yielding small oxides in the matrix includes specific element(s) in the alloy reacting with oxygen nucleating and growing the nanoscale oxides \textit{in situ} \cite{RN114}. In particular to this work, the ODS alloy studied is derived from an Fe-Ni-Zr metal alloy mix where Zr reacts with oxygen upon the alloying of the powders creating the oxide dispersion \cite{RN740}. This provides high strength for potential ballistic resistant applications. 
+	
+	AISI 4340 steel is part of a heat treatable low alloy class of medium-carbon steel that gains strength and toughness from its highly tunable ferrite/martensite phase fraction composition \cite{RN1435, RN1429, RN1447, RN1438}. The unique composition creates more quenching time than the typical medium carbon steel. This allows for unique microstructures (hence mechanical strengths) of 4340 through different cooling and tempering time and temperatures.
+	
+	Hard ferritic ODS and ferritic-martensitic steels can be formed into components using thermomechanical processing but joining and repair are still quite challenging \cite{RN3361}. Most repair and joining techniques require some form of localized heat that can alter the microstructure in the solid-state condition or even melt the material locally. In particular to melting, upon solidification deleterious changes in the mechanical properties and microstructure normally occur. For ODS materials, the nano-scale oxides will coarsen and agglomerate during melting and solidification which will cause the alloy to lose its strength. \ref{tab:Intro1} is a tabulation of various joining techniques for ODS alloys.
+	
+	
+	\begin{table}[]
+		\caption{The effects of different welding techniques on ODS materials. The fractions are to be understood as properties compared to the base material.}
+		\input{tab/Intro/Introtab1.tex}
+		\label{tab:Intro1}
+	\end{table} 
+	
+	The data from \ref{tab:Intro1} reveals that the increasing temperature caused by the joining technique tends to cause a deleterious change to the microstructure and a severe drop in mechanical strength, particularly the methods that require complete melting of the material. The solid-state joining techniques, friction stir welding and explosive welding show much more promising results because of the lower processing temperatures and warrants their own continuing studies. Because of the relative success in these solid-state processes, it provides motivation for research in another solid-state processing technique, namely cold gas dynamic spray.
+	
+	In the case of 4340 steel, an undesirable disparate phase fraction is formed in the heat-affected zones. Welding also creates a thermal gradient in the melted zones and heat-affected zones that can change dislocation density, grain size, and grain morphology in addition to unwanted phase volume fractions. As the microstructure of 4340 steel changes with temperature, the weldment of autogenous fusion welding has a large disparity in properties from the material not affected by heat. In addition, ferritic steels are known to be subject to hydrogen induced, delayed brittle failure of the weldment \cite{RN771}. 4340 steel is especially susceptible to this hydrogen cracking due to its increased martensite content. As the steel locally heats into austenite, hydrogen will diffuse from the ferrite to the austenite that then gets trapped in the resulting martensite structure caused by the post-weld’s high cooling rate \cite{RN3387}. Due to martensite’s low formation temperature, this cracking can occur at temperatures less than 200 \celsius{} and occur at a delayed time after welding. Weldments often have higher strength and are more brittle than the base material because the base material has been tempered and the weldment has not. This mismatch in strength causes unwanted residual stresses. To diminish the effects of these problems, 4340 steel welds usually go through a series of pre-weld heat treatment and post-weld anneal, and often require multi-pass welding \cite{RN3361}. While not impossible, these specific welding requirements are difficult to achieve in field operations and repairs where pre-heating and post-heating the weld and surrounding base metal is impractical. 
+	
+	Some alternatives to fusion welding 4340 steel have been explored. AISI 304 to 4340 steel and mild steel to 4340 steel have been joined successfully using FSW avoiding major defects and detrimental intermetallic phases \cite{RN526, RN1454}. Like the prior discussion of FSW of ODS alloys, this method provides heat through friction and deformation simultaneously that lend insights to general behavior that may be seen in the CS deformation. A major difficulty of FSW of high-strength alloys is that a pin of higher hardness than the base material must be used. Indeed, 4340 steel is hard enough to make FSW pins for other materials \cite{RN427}, so a material much stronger than 4340 must be found for the pin to weld 4340 steel. FSW pins degrade quickly in joining hard materials like 4340 and can create acceptable welds in only short passes before the tool deteriorates, forming welds with defects \cite{RN438}. Due to the outlined limitations, FSW cannot offer a complete solution to joining 4340 steel, and an alternate solid-state processing technique could prove useful.
+	
+	\textbf{\textit{Thus, in either ODS or 4340 joining and repair, a low-temperature technique is desired to mitigate the multiple temperature dependent microstructural changes that alter the strength of the alloys.}}
+	
+	Solid-state methods for forming, joining, and repairing high strength steels can address many of the problems created by fusion-based processing and joining methods. Solid-state bonding is where the material can bond through a method that does not require melting and usually requires some sort of thermo-mechanical processing. Such common solid-state processes include friction stir welding \cite{RN583}, additive friction stir deposition \cite{RN3432}, forge welding \cite{RN3433}, cold welding \cite{RN3434}, ultrasonic welding \cite{RN3436}, diffusion welding \cite{RN3437}, explosive welding \cite{RN799,RN422} and cold gas dynamic spray deposition \cite{RN3390}. 
+	
+	Cold gas dynamic spray, or cold spray (CS) includes powders being accelerated to supersonic speeds at relatively low temperatures while striking the substrate \cite{RN3390}. The powder particles experience severe plastic deformation when they impact the substrate at supersonic velocities and bond to the surface. Successful CS deposition requires that the deposited material plastically deform at high-strain rates. As a result, CS deposition of strong or hard materials is difficult because of these powders' limited plasticity. As solid-state bonding cannot occur without extensive plastic deformation, CS of strong powders creates poor-quality deposits with low deposition efficiencies. To improve the deposition of hard materials, recent work has reported the simultaneous use of a laser heating the substrate during CS enabling high-strength materials to be deposited \cite{RN173}. This laser heating combined with the solid-state deposition of CS could provide a solution to additively join and repair high-strength ferritic materials.
+	
+	This dissertation investigates the viability of using laser-assisted cold gas dynamic spray or LACS to process two high-strength, ferritic alloys – oxide dispersion strengthened Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} and ferritic-martensitic AISI 4340 steel. Of interest is the effect of laser assisted cold spray on microstructure and properties, since the localized heating of the laser coupled with the high impact velocities (i.e., strains) results in a unique thermo-mechanical processing condition. The study will show the effect of different processing conditions on resulting microstructures and material properties.
+
+\section*{Metallurgy of ODS Ferritic Alloys}
+
+	ODS alloys are composed of nanoscale oxide dispersions within a metal matrix. These hard oxide ceramic phases provide strength to the material (up to 800 MPa ultimate tensile strength \cite{RN1209}) and show remarkable creep behavior (over 10\textsuperscript{3 }hours maintaining stresses over 200 MPa at 750 \celsius{} \cite{RN1358}). The oxides can tune these properties and there have been several studies for a variety of oxides, including Y\textsubscript{2}O\textsubscript{3} and TiO\textsubscript{2} \cite{RN3391, RN735,RN3389}. In some cases, these ODS materials have been identified as candidates for future nuclear technologies. The high fraction of interfaces created by the oxide dispersions act as sources and sinks for defects that are created under irradiation making these materials more radiation resilient \cite{RN1367}. In addition the nano-scale particles can pin dislocations through Orowan looping as a strengthening and creep resistance mechanism \cite{RN3414}. Arguably, ODS materials are best known and studied for their uses in these types of harsh environments. Other types of ODS compositions, which may not be suitable for nuclear applications, may be ideal in other technologies such as ballistic protection. 
+	
+	One such ODS alloy is the family of Fe-Ni-Zr alloys, with much of the work in this alloy being done by Darling et al. \cite{RN740,RN243,RN1376,RN291,RN1247,RN476,RN550,RN966}. The oxide dispersants are created through mechanical alloying of the powders \cite{RN1177}. Elemental powders are placed inside of a mill with 440C stainless steel ball bearings which are sufficiently hard (up to a Rockwell hardness of 60 HRC \cite{RN3431}) whereupon it is either rolled or shaken in a vial container causing the powders to mix. The Zr is mechanically milled into the Fe matrix powder whereupon it reacts with intrinsic oxygen and readily oxidizes into nanosized spheres \cite{RN740}. Atom probe tomography (APT) has revealed the presence of Fe\textsubscript{x}O\textsubscript{y}, as well as ZrO\textsubscript{2}, but the ZrO\textsubscript{2} is found in much more abundance and is contributed to Zr’s larger negative free energy change with oxygen then with Fe \cite{RN740,RN267}. As the starting composition is denoted by three metal species, the Ni is included in Fe for solid-solution strengthening. The difference in the atomic sizes of Fe and Ni does not produce a significant mismatch, and Ni is less likely to precipitate out into its own phase as compared to Zr \cite{RN476}. High temperature \textit{in-situ} x-ray diffraction (XRD) has shown that the Fe-Ni-Zr powders transition from a body-centered-cubic (BCC) crystal structure to a face-centered cubic (FCC) crystal structure at temperatures near 700 \celsius{} and then revert to BCC again once cooled back down to room temperature \cite{RN550}. The lowering of the austenitic temperature for Fe, which is typically at 912 \celsius{}, is from the FCC stabilization effect of Ni in solution with Fe.
+	
+	The current means to produce bulk ODS material requires consolidation of the ball-milled powder. ODS powder sinter processing includes hot isostatic pressing (HIP) \cite{RN95}, spark plasma sintering (SPS) \cite{RN50}, and equal channel angular extrusion (ECAE) \cite{RN961, RN140, RN1026}. Since the BCC to FCC transition is lowered, this allows the alloy to thermally soften during high-temperature sintering processes, which can improve oxide survivability in either sintering or severe deformation synthesis. Darling et al. has studied how the mechanical behavior and microstructure of ODS material evolves with the Zr content\textsubscript{ }\cite{RN476}, wherein it was shown that Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1 }(at. $\%$) was both stronger and more ductile than Fe\textsubscript{88}Ni\textsubscript{8}Zr\textsubscript{4} (at. $\%$). Shear tests were performed with their corresponding cross sections imaged with scanning electron microscopy as shown in \ref{fig:Intro1}. Both the stress-strain diagram and the SEM images reveal brittle failure for Fe\textsubscript{88}Ni\textsubscript{8}Zr\textsubscript{4} and ductile failure for Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1. }Shear strength for the Fe\textsubscript{88}Ni\textsubscript{8}Zr\textsubscript{4 }is 650 MPa with a strain of 0.25 mm/mm and\textsubscript{ }Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1 }has a shear strength of 800 MPa and a displacement of nearly 0.5 mm/mm. Based on these findings, with an identified need for some amount of ductility in CS, this research used the Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1 }ball-milled alloy\footnote{ It should be noted that pure metals are used for alloying Fe-Ni-Zr. The ferrous alloy is not purposefully carburized or nitrided (although effects from small amounts of carbon and nitrogen may be found in chapter 3). I tried to differentiate the word ‘steel’ from this ferrous alloy as much as possible. It is not to be confused with 4340, which is a carburized steel.  }. It will form the ODS material while limiting the phase fraction of oxides that could make the alloy too brittle. 
+	
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=6.27in]{fig/Intro/Picture1.png}
+		\caption[Shear stresses of different compositions of mechanically alloyed Fe-Ni-Zr with scanning electron micrographs of the selected surfaces (Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} in the top left-hand corner and Fe\textsubscript{88}Ni\textsubscript{8}Zr\textsubscript{4} in the bottom-right corner).]{Shear stresses of different compositions of mechanically alloyed Fe-Ni-Zr with scanning electron micrographs of the selected surfaces (Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} in the top left-hand corner and Fe\textsubscript{88}Ni\textsubscript{8}Zr\textsubscript{4} in the bottom-right corner). Figure from Kotan et al. \cite{RN476}.}
+		\label{fig:Intro1}
+	\end{figure}
+
+	
+	
+
+
+\section*{Metallurgy of AISI 4340 Steel}
+
+	While ODS materials Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1 }have shown promise in high strength applications, 4340 steel is widely used as a structural material due to its high strength. The 4340 steel alloy is a part of a family of heat treatable low alloy (HTLA) steels whose composition is (wt. $\%$): 0.4 $\%$  C, 0.8 $\%$  Cr, 0.25 $\%$  Mo, 1.8 $\%$  Ni, 0.7 $\%$  Mn, and 0.25 $\%$  Si for a total alloy content of 3.8 $\%$  \cite{RN2268}. These alloys can be found in maritime and ballistic applications because of their high fracture toughness despite their high strength, which is 9.8 $\%$  strain at 1.6 GPa ultimate tensile strength variable with tempering \cite{RN1418}.\ This information, along with other similar alloys, is plotted in \ref{fig:Intro2}.  Furthermore 4340 has favorable strain-rate strength evident by its 1.2 GPa compressive strength at strain rates of 10\textsuperscript{3} s\textsuperscript{-1} \cite{RN2270, RN674}. 
+	
+	The 4340 strengthening mechanisms are solid solution mechanisms (from carbon and other solutes) as well as phase strengthening (martensite) controlled by thermal processing. The amount of carbon is paramount in martensite formation as well as the cooling rates that promote this diffusional transformation \cite{RN691}. Moreover, the addition of alloying elements help shifts the related ferrite, austenite, and martensite transformation times and temperatures to enable longer cooling times before the non-martensite transformations occur. This extra time can further tune the microstructure and resulting strength. Ferritic-martensitic 4340 steel has been successfully and commercially fabricated in several different applications, which is contributed to its tunable microstructure. 4340 steel and other medium carbon steels easily form martensite when quenched \cite{RN1358}. \ref{fig:Intro2} shows the composition and mechanical properties of some common low Cr, medium C alloys, which are similar to 4340. 
+	
+	
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=6.27in]{fig/Intro/Picture2.png}
+		\caption[Sampling of medium-carbon low-alloy steels oil quenched from 845 \celsius{} and tempered at different temperatures with composition, and mechanical properties.]{Sampling of medium-carbon low-alloy steels oil quenched from 845 \celsius{} and tempered at different temperatures with composition, and mechanical properties. \textbf{(a)} Approximate alloy contents (wt. $\%$) of medium-carbon low-alloy steels with Fe being the balance. \textbf{(b)}\ The relationship between tempering temperatures (205 \celsius{} and 650 \celsius{}), tensile strength, and ductility measured through elongation at 50 mm. Note the 300M alloy represented by the purple star was experimented on only at a 425 \celsius{} temper, the closest recorded temperature to 650 \celsius{}. Data were compiled from \cite{RN2268}.}
+		\label{fig:Intro2}
+	\end{figure}
+
+	
+	
+	
+	In \ref{fig:Intro2}, the defining feature that separates AISI 4340 steel from other HTLAs is the inclusion of Ni in addition to the Cr and Mo, which is usually present in these other HTLAs. In direct comparison of 4340 (with Ni) and 4140 (without Ni) the extra Ni delays the minimum time of ferritic/pearlitic transformation by approximately 100 seconds and bainitic transformations by approximately 8 seconds \cite{RN2269}. This allows an extension of quenchable time allowing greater amounts of the martensitic phase to form in thicker plates without creating a low-temperature stabilized austenite, as shown in \ref{fig:Intro3}. Common processing practices include quenching and tempering to tailor the amount and effect of martensitic phase present. The practical example given in \ref{fig:Intro2}b shows that after quenching in oil from 845 \celsius{} and a tempering of 205 \celsius{}, 4140 and 4340 steel shares nearly the same strength and ductility. However, at a 650 \celsius{} temper, the 4140 alloy (strength of 900 MPa, elongation 21 $\%$) sacrifices some strength to gain extra ductility compared to the 4340 alloy (strength 1025 MPa, elongation 20 $\%$).\textbf{ }4340 steel can increase yield strength with only a marginal sacrifice of ductility.
+	
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=6.27in]{fig/Intro/Picture3.png}
+		\caption[Transformation-temperature-time graphs of \textbf{(a)} 4140 (medium C, low Cr, low Mo) and \textbf{(b)} 4340 steel (medium C, low Cr, low Mo, low Ni, see \ref{fig:Intro2}).]{Transformation-temperature-time graphs of \textbf{(a)} 4140 (medium C, low Cr, low Mo) and \textbf{(b)} 4340 steel (medium C, low Cr, low Mo, low Ni, see \ref{fig:Intro2}). $``$A$"$  is labelled as austenite, $``$F$"$  is labelled as ferrite, and $``$C$"$  is labelled as cementite. The addition of Ni shifts the noses of the ferrite/pearlite nose of the curve to the right by 100 seconds and the bainite nose of the curve to the right by about 8 seconds. Figures from the American Society of Metals \cite{RN2269}.}
+		\label{fig:Intro3}
+	\end{figure}
+
+	
+
+
+\section*{Cold Spray Deposition}
+
+	With the metallurgy aspects of ODS and 4340 described, coupled with the motivation to develop a low temperature joining application, the research dissertation has explored cold spray processing.
+
+	\subsection*{Solid-State Deposition}
+
+		Cold gas dynamic spray, or cold spray (CS), deposition is a solid-state materials fabrication technique, so it sidesteps the issues associated with fusion based processing or joining. CS is the process of driving heated and pressurized gas and powder through a de Laval nozzle. The particles reach supersonic speeds at temperatures much less than the melting temperature \cite{RN435}. The particles then hit the substrate with high kinetic energy promoting severe plastic deformation. This causes the metal to stick to the substrate through mechanical interlocking and metallurgical bonding. 
+		
+		With controlled movement, cold spray systems can deposit metals with custom geometries and surfaces allowing for applications such as coating, joining, and fabrication. Because of the high velocities obtained in cold spray, the energy that drives the bonding is in the form of kinetic energy instead of thermal energy allowing for a process that offers low-temperature joining that can avoid many undesired qualities of fusion weldments including grain growth, hydrogen absorption, and oxide agglomeration. This has considerable interest for additive manufacturing, additive repair, and additive joining applications. Successful coatings and structures have been reported for softer materials, most commonly with Al \cite{RN796, RN147, RN1296, RN192}, Cu \cite{RN892, RN1172, RN2278}  and Ti \cite{RN461, RN571, RN678} alloys.
+
+	\subsection*{Severe Plastic Deformation at High-Strain Rates}
+
+		The exact mechanism that causes bonding has not yet reached a consensus among the scientific community \cite{RN1687, RN1292, RN3402, RN3403}. However, the guiding principle governing a successful cold spray deposit relies upon the requirement of the powders to undergo severe plastic deformation at ultra-high-strain rates (up to 10\textsuperscript{9 }s\textsuperscript{-1} have been suggested \cite{RN1687}). If the powder particles cannot deform enough, then they will ricochet off the substrate. For the particles to achieve this deformation, the powder particles must reach critical velocity. Critical velocity is defined as the minimum velocity powder particles must reach if they are to deform and stick to the substrate. The relationship between critical velocity and materials properties may be found in equation 1,
+		
+		\begin{equation}
+			V_{crit}=\sqrt[]{\frac{A \sigma }{ \rho }+BC_{p} \left( T_{m}-T \right). }
+		\end{equation}
+		
+		
+		C\textsubscript{p }and \(   \rho   \) are heat capacity and density of the material. T\textsubscript{m} and T are melting temperature and current temperature. A and B are fitting constants.  \(  \sigma  \)  is temperature-dependent flow stress,
+		
+		
+		\begin{equation}
+		  \sigma = \sigma _{ultimate} \left[ 1-\frac{T-T_{R}}{T_{m}-T_{R}} \right]
+ 		\end{equation}
+		
+		
+		
+		where T\textsubscript{R} is the temperature where ultimate strength is measured (usually room temperature) \cite{RN1685}. Stronger materials require a higher impact velocity if they are to bond to the substrate. In addition to strength, microstructure and crystallinity of the material may also affect the critical velocity required to deposit.
+		
+		
+		
+		Previous research indicates that BCC alloys are in general much more difficult than FCC or even hexagonal close packed (HCP) alloys to spray \cite{RN559, RN1383, RN155, RN180, RN183, RN451, RN179}.\ One  hypothesis is that although BCC alloys have more slip planes than other crystal structures, high-strain rates and extreme plastic deformation requires screw dislocation motion that is strongly hindered by the Peierls stress \cite{RN1375}. This reasoning, however, may become more complicated with nanocrystalline materials. Cold spray particles have either fine or ultra-fine grains depending on the atomizing and solidification technique. In the instance of ODS material, the particles are nanocrystalline due to the ball milling and mechanical alloying process after powder formation. The principle of strain-rate sensitivity, crystal structure, and grain size may possibly be applied to CS depositions. Strain-rate sensitivity, the measure by which materials increase in strength when stressed at high rates, increases in FCC materials with decreasing grain size \cite{RN3410}. In BCC materials, the strain rate sensitivity \textit{decreases} with decreasing grain size \cite{RN3411}. These bulk strain rate studies however usually peak at 10\textsuperscript{4} s\textsuperscript{-1}, several orders of magnitude lower than cold spray strain rates.
+		
+		
+		
+		Preliminary results suggest that nanocrystalline FCC material could be more difficult to spray relative to their strength compared to BCC material. There are some reports of CS deposits of FCC nanocrystalline material including: Al 5083 \cite{RN1890, RN143, RN1347}, commercially pure Ni \cite{RN3409}, and commercially pure Cu \cite{RN3406}. Deposition efficiency was not directly listed in these reports. Nevertheless, in the Cu study, coating thicknesses of the nanocrystalline Cu powder deposits were about a third to half as thick (100-150 $ \mu $m) as starting Cu powder deposits (300 $ \mu $m). Nanocrystalline Al 5083 produced porous deposits of more than 20$\%$. In a CS study of commercially pure ball-milled BCC Fe, powders with an average grain size of 100 nm yielded a mass deposition efficiency (35 $\%$) that is more than half the deposition efficiency of powders with grains 1-5 $ \mu $m in diameter (65 $\%$) \cite{RN3405}. The nanocrystalline Fe deposits were fully consolidated. These findings are congruent with the relationship between crystal structure, grain size, and strain-rate sensitivity, although not entirely definitive because ball milling also changes the starting powder particles’ spherical shape and deforms them into irregularly shaped particles. 
+		
+		
+		
+		It is still not certain if the irregularly shaped particles help or interfere with deposition as the irregular shapes could catch the gas stream easier for higher velocities but could also interfere with the mechanical interlocking during deposition \cite{RN1347}. A study with NiCr-CrC found that irregularly shaped powders deposited where spherical powders did not \cite{RN511}. Ti-6Al-4V irregular-shaped particles created lower-porosity CS deposits than spherical powders \cite{RN3428}. However, even though powder particles may catch the gas stream better and move faster, a different Ti study shows that irregular particles must move 200 m/s faster than spherical particles in order for irregular particles to reach the same deposition efficiencies as spherical particles \cite{RN679}. 
+		
+		
+		
+		As such, yield-point drops and strain localization present in the form of adiabatic shearing and dynamic strain aging is conclusively found in 4340 steel \cite{RN267, RN1418, RN2270, RN282, RN1449, RN1419}. This dissertation covers the only currently known high-strain rate study of an ODS material where yield-point drop and dynamic strain aging is found. This study will be expounded upon in Chapter 3 \cite{RN267}. 
+		
+		
+		
+		In order to achieve deposition, the particles must strike the substrate at a critical velocity. The velocity of the gas through a de Laval nozzle is modeled after the following equation,
+		
+		
+		\begin{equation}
+			V_{g}=\sqrt[]{ \left( \frac{2RT_{g} \gamma }{M_{gas} \left(  \gamma -1 \right) } \right)  \left( 1- \left( \frac{p}{p_{i}} \right) ^{\frac{ \gamma -1}{ \gamma }}+V_{gi}^{2} \right) }
+		\end{equation}
+		
+		
+		
+		where R, T\textsubscript{g},  \(  \gamma  \) , M\textsubscript{gas}, p, p\textsubscript{i}, and V\textsubscript{gi}\textit{ }are\textit{\textsubscript{ }}the gas constant, gas temperature, specific heat ratio, molecular weight of the gas, gas pressure, initial gas pressure, and initial gas velocity respectively. As can be seen here, the three variables that can be tuned are the molecular weight of gas, the gas temperature, and gas pressure. Helium gas is used as it provides the lowest molecular weight gas that is safe to use in the violent cold spray environment. Gas is normally heated to temperatures between 400 \celsius{} and 700 \celsius{} at pressures between 2.5 MPa and 4.5 MPa. The increase in temperature and pressure does increase velocity, but only at the rate of the square root of their products. Increasing temperature and pressure becomes more of an engineering challenge and after a point, provides diminishing returns. However, the small gains in velocity may be enough to deposit high-strength materials. Successful CS deposits of maraging steel (M300) and pure ball-milled Fe at extreme gas conditions (gas pressure at 5.0 MPa, and gas temperature at 1000 \celsius{}) have been reported \cite{RN3405, RN3404}; however, many cold spray systems currently cannot achieve such conditions, particularly such a high gas temperature.
+
+\section*{Laser Assisted Cold Spray Deposition}
+
+
+
+	\subsection*{Solid-State Bonding with Thermal Support}
+
+		
+		In order to improve deposition efficiency and deposition quality of CS deposits, a high-powered laser has been attached to CS systems and directed on the substrate underneath the nozzle. The laser irradiates the surface directly underneath the nozzle during deposition. This technique is called laser assisted cold spray (LACS), sometimes referred to as supersonic laser deposition \cite{RN173, RN597}. In the first recorded efforts of LACS, a low-pressure cold spray system was assisted by a laser to improve deposition for Cu and Al materials that move less than the critical velocity \cite{RN3366}. Bray et al. demonstrated that deposition efficiency increased by more than 7 times by irradiating the surface of the substrate during deposition of high-pressure cold spray \cite{RN173}. Suggested effects of the laser in LACS shown through micrograph cross-sections of the Ti deposit include softening the substrate through laser heating so that mostly the substrate, not the particle, deforms. Since then, LACS has been applied to improve the deposition efficiency and quality of many material systems including: Co-based Stellite 6 \cite{RN1390, RN1406, RN780}, ODS Fe-Ni-Zr \cite{RN383}, Ni-based Inconel \cite{RN1397}, diamond/Ni60 composite \cite{RN1407}, TiO\textsubscript{2}-Zn \cite{RN1402}, tungsten \cite{RN156}, and tungsten-carbide stainless steel composite \cite{RN2245}. Most LACS research uses a laser off axis from the nozzle and powder flow but is situated in a way so that the laser is always illuminating the spot underneath the nozzle as shown in \ref{fig:Intro4}. The laser adds heat to the substrate and substrate temperature is measured with a pyrometer parallel to the laser. Temperature of the surface is regulated by the pyrometer measuring the emitted light of the metal due to temperature. With the regulation of raster speed and laser power, surface temperatures up to iron’s melting temperature may easily be reached. 
+		
+		
+		
+		
+		
+	
+		\begin{figure}
+			\centering
+			\includegraphics[width=6.27in]{fig/Intro/Picture4.png}
+			\caption{Photograph showing the principal pieces of off-axis LACS where the laser, connected to the side of the nozzle is angled such that the area directly underneath the nozzle is irradiated.}
+			\label{fig:Intro4}
+		\end{figure}
+		
+		
+		
+		
+		ODS Fe-Ni-Zr and 4340 steel ferritic alloys provide interesting case study materials to determine if LACS can improve the deposition efficiency in BCC metals. Both metal types have different strengthening mechanisms that are sensitive to heating. The use of the laser offers an opportunity in the deposition by providing thermo-mechanical processing conditions which can tune the microstructure. Considering the likelihood of 4340 steel and ODS alloys not CS depositing well due to their high strength, and the success of LACS deposition of other difficult-to-spray materials, the introduction of a laser to the CS process could improve deposition efficiency and deposition quality of 4340 steel and ODS alloys.
+		
+
+
+	\subsection*{Microstructure of LACS Deposition}
+
+
+		The microstructures of CS deposits show grains that are much smaller than the grains found in the original starting powder. Transmission Kikuchi diffraction and precession electron diffraction of Al-5Cu single splats and continuous sprays show that grain size has a tendency to be larger in the center of the powder particle as opposed to the interface and the surface \cite{RN486, RN670}. A similar microscopy study in stainless 304 and 316 show that regions in between particles are ultra-fine grains (200-500 nm) with a low dislocation density \cite{RN1373}. This recrystallization at the interfaces is likely due to the high volume of dislocations created during the severe plastic deformation that then combine and create new grains during the elevated temperatures caused by the hot gas blowing on the surface. Additionally, annealed CS deposits show recovery and recrystallization \cite{RN461} suggesting that the elevated heat from LACS could profoundly change the microstructure of cold sprayed deposits.
+		
+		
+		
+		Changes in both the microstructure and nanostructure of materials have been recorded as a result of LACS. Micrographs of LACS deposits show a slightly different deformed microstructure, one where instead of the particles deforming, the substrate deforms instead. Porosity has shown to also decrease from increased surface temperature \cite{RN173}. Maier et al. have CS deposited a gas atomized metal alloy with the same composition as a common ODS alloy, 14YWT \cite{RN378}. The grains refined but did not have the same nanocrystalline structure found in ball-milled samples. Furthermore, substantial grain growth was found during annealing after deposition suggesting that despite the plastic deformation particles experience during cold spray, cold spray by itself is not an adequate substitute for ball milling where particles are repeatedly deformed. 
+		
+		
+		
+		Story et al. have published an preliminary investigation into the feasibility to CS a single layer of ODS Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1 }onto a softer substrate \cite{RN383},\ with the author as a contributor. The increase in surface temperatures increased the mass-based measured deposition efficiency from 8.1 $\%$  at a surface temperature of 320 \celsius{} to 17.2 $\%$  at 950 \celsius{}. The grains in the deposit revealed an abnormal grain size distribution that was dependent on the deposition temperature.  At 320 \celsius{}, most of the grains were $ \sim $ 100 nm with a few large grains near 1 $ \mu $m in diameter. At 950 \celsius{}, the grains experienced growth with the majority of them having a grain diameter of 1 $ \mu $m, but again, a few grains were noted to be quite large, i.e. on the order of 5 $ \mu $m in diameter. APT revealed that the nano-scale oxides survived the LACS process but also coarsened, similar to the grains. A qualitative comparison showing the oxide growth was reported. The measured oxide number density at 320 \celsius{} was 4.3E23 m\textsuperscript{-3} and decreased to 2.49E23 m\textsuperscript{3 }at 950 \celsius{}. A deeper study into the microstructure of LACS deposits of ODS materials will be given in this dissertation (Chapter 4). 
+
+
+
+\section*{Dissertation Organization}
+	
+	
+
+	
+	This dissertation will be divided into chapters which represent five, stand-alone journal articles, and are grouped according to material type. These are summarized below. 
+	
+	
+	\begin{itemize}
+		\item Chapter 2 – Experimental Procedure. This chapter summarizes the general methods for processing and characterizing that was undertaken for the rest of the dissertation. \par
+	
+		\item Chapter 3 - $``$Microstructure and dynamic strain aging behavior in oxide dispersion strengthened Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1 }(at. $\%$)  alloy \cite{RN267}.$"$  The paper explores dynamic compression tests of equal channel angular extruded ODS Fe-Ni-Zr, demonstrating that even though the nano-oxides add to a high-yield strength, carbon and nitrogen interstitials still play a role in plastic behavior. Though the maximum strain rate (10\textsuperscript{3} s\textsuperscript{-1}) is less than what is predicted for CS deposition (10\textsuperscript{9} s\textsuperscript{-1}), it provides some of the initial work investigations of these materials in higher strain conditions than simple quasi-state conditions (10\textsuperscript{-3} s\textsuperscript{-1}). \par
+	
+		\item Chapter 4 - $``$Multi-Layered Structures of Oxide Dispersion Strengthened Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} Through Laser Assisted Cold Spray Deposition,$"$  addresses multi-layered LACS of ODS materials and expounds upon the microstructure of LACS. \par
+	
+		\item Chapter 5 - $``$The Influence of Isoconcentration Surface Selection in Quantitative Outputs from Proximity Histograms \cite{RN1023}.$"$  This paper clarifies the ability of current atom probe software technology to analyze clusters including potential and limitations. \par
+	
+		\item Chapter 6 - $``$Residual Stress Generation in Laser Assisted Cold Spray Deposition of Oxide Dispersion Strengthened Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1}.$"$  Here, this paper addresses the surface residual stress behavior of LACS of ODS materials. \par
+	
+		\item Chapter 7, $``$Laser-Assisted Cold Spray of AISI 4340 steel.$"$  In this paper, an initial investigation of LACS of AISI 4340 steel is provided, included hardness and microstructure connections. \par
+	
+		\item Chapter\ 8 – Summary and Future work.  This chapter concludes the outcomes of the dissertation and identifies areas of future investigation.
+	\end{itemize}
+
