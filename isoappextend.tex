@@ -1,0 +1,65 @@
+\chapter{EXTENSION OF CLUSTER ANALYSIS TECHNIQUES}
+
+While what is presented in this appendix section is less novel than the information contained in the main body, here is more material that may help illustrate capabilities offered by current commercial software (IVAS) in atom probe analysis. Cluster analysis programs currently work best with uniform and regular cluster shapes and sizes. One of the major issues with cluster analysis is all of the possible parameters used in the analysis. Isosurfaces were the main focus concerning this dissertation. A small expansion on isosurfaces will be given including a harder look at cluster analysis.
+
+First, an extra data set, the same one shown as an example in Chapter 3 and Chapter 5 was given similar treatment. This appendix section shows the application of data. They are left out of the main text to avoid confusion in the chapter, but are included here to show that the principles found in Chapter 5 may be applied to different atom probe datasets and does not exclusively apply to that one particular data set.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/Appendix/AppIso1.png}
+	\caption{Selected APT reconstruction atom maps for Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1}}
+	\label{fig:AppIso1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/Appendix/AppIso2.png}
+	\caption[Compositions (at. \%) from inside the isoconcentration surface (particle) as a function of Zr isoconcentration value.]{\textbf{(a)} Compositions (at. \%) from inside the isoconcentration surface (particle) as a function of Zr isoconcentration value. The three different lines are statistical confidences at $\sigma-1${}, $\sigma-2${}, and $\sigma-3${} \textbf{(b)} Particle number density as a function of Zr isoconcentration surface.}
+	\label{fig:AppIso2}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/Appendix/AppIso3.png}
+	\caption[Series of APT reconstruction figures concerning at. \% Zr isoconcentration surface value and confidence $\sigma{}$ values for Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} ECAE processed at 800 \celsius{}.]{Series of APT reconstruction figures concerning at. \% Zr isoconcentration surface value and confidence $\sigma{}$ values for Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} ECAE processed at 800 \celsius{}. Data are more sensitive to confidence values at lower isoconcentration surface values than at higher isoconcentration surface values.}
+	\label{fig:AppIso3}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/Appendix/AppIso4.png}
+	\caption[A series of figures showing the evolution of isoconcentration surfaces as functions of Zr isoconcentration surfaces and $\sigma${} confidences]{A series of figures showing the evolution of isoconcentration surfaces as functions of Zr isoconcentration surfaces and $\sigma${} confidences using \textbf{(a)} CSR and \textbf{(b)} chemically randomizing the data while keeping the same atom positions. The mass spectrum is the same as the original experimental atom probe data and the
+	mass-to-charge ratio assignments to positions were randomized.}
+	\label{fig:AppIso4}
+\end{figure}
+
+\ref{fig:AppIso5} shows a series of proximity histograms based on different isoconcentration surfaces on the dataset based on the Fe-Ni-Zr ODS 1000 \celsius{} ECAE processed material described earlier in the dissertation. This figure shows that as isosurfaces are changed, the proximity histogram is moved. The inflection point of the proxigram moves closer to the center of the cluster with  increase of Zr isoconcentration values. As mentioned in Chapter 5, the change in isosurface value will move the proximity histogram in relation to the center of the cluster, but the shape (including minimum concentration, maximum concentration, and concentration gradient) of the proximity histogram will not change.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/Appendix/AppIso5.png}
+	\caption[Proximity histograms of \textbf{(a)} Zr, and \textbf{(b)} Fe, of the average isosurfaces at different Zr isosurface concentrations from 1 at. \% to 20 at. \%.]{Proximity histograms of \textbf{(a)} Zr, and \textbf{(b)} Fe, of the average isosurfaces at different Zr isosurface concentrations from 1 at. \% to 20 at. \%. Each line is stepped by 1 \%. }
+	\label{fig:AppIso5}
+\end{figure}
+
+It is shown that differences in order changes counts, but does not change the volume substantially. Changes in N\textsubscript{min} have an up to 5x change in both counts and volume. Changes in both the N\textsubscript{min} and order does change the d\textsubscript{max} condition of choice (the current accepted d\textsubscript{max} is where the counts are at a local minimum. However, as the ideal d\textsubscript{max} changes, the mean volume for the particles will also change demonstrating a widely varied solution of volume and counts based on user-defined parameters.) Obtaining this much information required a substantial amount of manual input in IVAS and could not be employed in normal data mining as IVAS is currently constructed.
+ 
+\ref{fig:clusteranal} shows an expanded version of the \ref{fig:Iso5}, with different orders, 1, 5, and 10. Order is the number of neighbors of a cluster that would be considered a core data point. Adding just this extra parameter changes the counts slightly and the volume of the cluster on a log-scale with no real solution to the changes of parameters other than looking at it to see if it makes qualitative sense. Some suggestions for the correct d\textsubscript{max} is made occasionally, but has the potential of not working as extra parameters are added.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/conclusion/clusteranal.png}
+	\caption[Cluster analysis of ODS Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} through the maximum separation method.]{Cluster analysis of ODS Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1} through the maximum separation method. The number of counts as a function of d\textsubscript{max} and N\textsubscript{min} is given for \textbf{(a)} Order 1, \textbf{(b)} Order 5, and \textbf{(c)} Order 10. The mean, median and maximum of the clusters as a function of d\textsubscript{max} and N\textsubscript{min} are given for \textbf{(d)} Order 1, \textbf{(e)} Order 5, and \textbf{(f)} Order 10.}
+	\label{fig:clusteranal}
+\end{figure}
+
+A serious main problem of common clustering techniques is the local magnification and aberrations that occur with particles as reported by \cite{RN2620}. \ref{fig:AppIso7} shows regarding to this dataset in particular one of the struggles that clustering algorithms have in detail. The iron in this figure is missing from the clustering Zr. However, the density of
+  Fe tends to increase while surrounding the particle. This increase in density is however not uniform around every particle. A concentration-based clustering technique is more likely to be incorrectly measured due to the incongruous and not necessarily correct measurement of solvent concentration. In the particle itself, congregating Zr is not necessarily uniform in the particle. This often frustrates common clustering techniques found in other data mining situations outside of atom probe because the rules of clustering considering both position and chemical information. Improving upon current cluster techniques will be required to create more believable atom probe cluster analysis.
+Great strides recently have been undertaken including Gaussian mixture modeling, \cite{RN632}, core and reachability defining \cite{RN2630}, and heirarchical density based modeling \cite{RN217} that may deepen the rigor of the clustering techniques. The author is hopeful that a standardized technique to better describe clustering behavior in complex solutions will be achieved in the near future.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6.27in]{fig/Appendix/AppIso7.png}
+	\caption[Two-dimensional 10 nm thick slice (looking from the top down) of an atom probe tip of Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1}.]{\textbf{(a)} Two-dimensional 10 nm thick slice (looking from the top down) of an atom probe tip of Fe\textsubscript{91}Ni\textsubscript{8}Zr\textsubscript{1}. The Fe matrix is represented by single pixels, and the other constituents are represented by spheres in that the Fe is a sampling of what is present and every detected ion labeled here is represented by a sphere. \textbf{(b)} The same image with a cylinder cut through the atom probe datasets. \textbf{(c)} The 1-dimensional concentration counts found as a function of distance through the cylinder. The shaded boxes show the change in counts as a function of distance indicating either the presence of a cluster or a hole.}
+	\label{fig:AppIso7}
+\end{figure}
